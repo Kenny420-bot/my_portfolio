@@ -1,0 +1,431 @@
+
+.resume{
+    width: 100%;
+    height: fit-content;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+
+
+    &__crumb{
+        position: absolute;
+        bottom: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: _palette(white);
+        font-size: 1rem;
+        letter-spacing: -1px;
+        z-index: 3;
+        font-weight: 600;
+
+        @include tablet{
+            transform: translateX(0);
+            left: 60px;
+            bottom: 50px;
+        }
+
+        @include desktop{
+            position: fixed;
+            font-size: 1rem;
+            bottom: 50px;
+            left: 50px;
+            // transform: rotate(90deg) translate(-60%, 50%);
+        }
+
+        span{
+            color: _palette(pri);
+        }
+    }
+
+    &__header{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(../img/resume/about.jpg);
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+        position: relative;
+        // border-bottom: 1px solid _palette(trans-white);
+    
+        h3{
+            color: _palette(white);
+            font-size: 1.1rem;
+            word-spacing: 5px;
+            letter-spacing: -1px;
+            z-index: 3;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+            margin-bottom: -20px;
+
+            @include tablet{
+                font-size: 1.2rem;
+              }
+        
+              @include desktop{
+                font-size: 1.3rem;
+              }
+        }
+        h1{
+            color: _palette(white);
+            font-size: 4rem;
+            word-spacing: 5px;
+            letter-spacing: -3px;
+            z-index: 3;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+
+            @include tablet{
+                font-size: 4.5rem;
+              }
+        
+              @include desktop{
+                font-size: 5rem;
+              }
+    
+            span{
+                color: _palette(pri);
+            }
+        }
+    
+        .to-down{
+            position: absolute;
+            bottom: 50px;
+            right: 50%;
+            color: _palette(white);
+            font-size: 1.5rem;
+            animation-name: bob;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+            z-index: 3;
+            padding: 10px;
+
+            @include tablet{
+                right: 60px;
+            }
+
+            @include desktop{
+                right: 50%;
+            }
+    
+            &:hover{
+                cursor: pointer;
+                color: _palette(pri);
+            }
+        }
+    }
+
+    &__body{
+        width: 100%;
+        padding: 40px 30px;
+        height: fit-content;
+
+        @include desktop{
+            width: 63%;
+            margin: 0 auto;
+        }
+
+        &__about{
+            border: 1px solid _palette(trans-white);
+            background: _palette(dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            width: 100%;
+            margin: 50px 0;
+
+            @include desktop{
+                margin: 150px 0;
+            }
+
+            @include tablet{
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 40px 20px;
+            }
+
+            .img{
+                width: 150px;
+                background: _palette(pri);
+                border-radius: 2px;
+
+                @include tablet{
+                    width: 170px;
+                }
+            }
+
+            .desc{
+                margin-top: 20px;
+                color: _palette(white);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                @include tablet{
+                    width: 85%;
+                    margin: 0 20px;
+                    text-align: start;
+                    // border: 1px solid red;
+                    display: block;
+                }
+            
+                &__intro{
+                    font-size: .9rem;
+                    text-align: center;
+                    padding: 0 20px 20px;
+                    line-height: 1.2;
+                    width: 100%;
+                    border-bottom: 1px solid _palette(trans-white);
+
+                    @include tablet{
+                        text-align: left;
+                        padding: 0;
+                        padding-bottom: 20px;
+                    }
+
+                    @include desktop{
+                        font-size: 1rem;
+                    }
+                }
+
+                &__inner{
+                    margin: 10px 0;
+                    width: 100%;
+
+                    @include tablet{
+                        display: flex;
+                        flex-direction: row;
+                        text-align: center;
+                        justify-content: space-between;
+                        margin: 20px 0;
+                    }
+                    div{
+                        text-align: center;
+
+                        @include tablet{
+                            text-align: left;
+                        }
+                        
+                        p{
+                            color: _palette(pri);
+                            font-size: .9rem;
+                            margin-top: 5px;
+
+                            @include desktop{
+                                font-size: 1rem;
+                            }
+
+                            span{
+                                color: _palette(white);
+                            }
+                        }
+                    }
+                }
+
+                &__cv{
+                    text-decoration: none;
+                    color: _palette(white);
+                    font-size: 1rem;
+                    border: 2px solid _palette(white);
+                    padding: 5px 20px;
+                    width: fit-content;
+                    margin: 10px auto 0;
+                    font-weight: bold;
+                    border-radius: 2px;
+                    transition: all .5s ease;
+
+                    @include tablet{
+                        margin: 0;
+                    }
+
+                    &:hover{
+                        border-color: _palette(pri);
+                        color: _palette(pri);
+                    }
+                }
+            }
+        }
+
+        &__services{
+            margin: 100px 0;
+            color: _palette(white);
+
+            @include desktop{
+                margin: 150px 0;
+            }
+
+            .title{
+                font-size: 1.2rem;
+                font-weight: bold;
+                letter-spacing: -1px;
+
+                @include desktop{
+                    margin-left: 40px;
+                    font-size: 1.5rem;
+                }
+            }
+            
+            .row{
+                width: 100%;
+
+                @include tablet{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+                }
+                
+
+                .service{
+                    border: 1px solid _palette(trans-white);
+                    margin-top: 40px;
+                    padding: 30px 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background: _palette(dark);
+
+                    &__icon{
+                        color: _palette(pri);
+                        font-size: 2rem;
+                    }
+
+                    &_title{
+                        font-size: 1.2rem;
+                        margin: 10px 0;
+                        font-weight: bold;
+                        text-align: center;
+
+                        @include desktop{
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    &__desc{
+                        text-align: center;
+                        font-size: .9rem;
+                        line-height: 1.2;
+
+                        @include desktop{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__skills{
+            margin: 100px 0;
+            color: _palette(white);
+
+            @include desktop{
+                margin: 150px 0;
+            }
+
+            .title{
+                font-size: 1.2rem;
+                font-weight: bold;
+                letter-spacing: -1px;
+
+                @include desktop{
+                    margin-left: 40px;
+                    font-size: 1.5rem;
+                }
+            }
+            
+            .row{
+                width: 100%;
+                margin: 30px 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+
+                @include tablet{
+                    grid-template-columns: repeat(4, 1fr);
+                }
+                
+
+                .skill{
+                    border: 1px solid _palette(trans-white);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 10px 0;
+                    background: _palette(dark);
+
+                    &__icon{
+                        font-size: 1.5rem;
+                        color: _palette(pri);
+                    }
+
+                    &__title{
+                        font-size: .9rem;
+                        font-weight: bold;
+                        text-align: center;
+
+                        @include desktop{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__contact{
+            border: 1px solid _palette(trans-white);
+            width: 250px;
+            padding: 10px 0;
+            margin: 0 auto;
+            text-align: center;
+            background: _palette(dark);
+
+            .to-top{
+                color: _palette(white);
+                font-size: 1.5rem;
+                display: inline-block;
+                padding: 10px;
+    
+                @include tablet{
+                    right: 60px;
+                }
+    
+                @include desktop{
+                    right: 50%;
+                }
+        
+                &:hover{
+                    cursor: pointer;
+                    color: _palette(pri);
+                }
+            }
+
+            a{
+                text-decoration-style: dotted;
+                text-decoration-thickness: 2px;
+                color: _palette(white);
+                outline-color: _palette(pri);
+
+                &:active{
+                    color: _palette(pri);
+                }
+
+                &:hover{
+                    color: _palette(pri);
+                }
+            }
+
+            p{
+                color: _palette(white);
+                font-size: .9rem;
+                margin: 5px 0;
+                letter-spacing: 1px;
+                font-weight: bold;
+            }
+        }
+    }
+}

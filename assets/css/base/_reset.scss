@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: poppins;
+}
+
+::selection{
+    color: _palette(white);
+    background: _palette(trans-pri);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: _palette(dark);
+}
+
+::-webkit-scrollbar-thumb{
+    background:_palette(white);
+    border-radius: 10px;
+
+    &:hover{
+        background:_palette(pri);
+    }
+}
+
+.container{
+    width: 100%;
+    height: fit-content;
+    background: _palette(dark);
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+}

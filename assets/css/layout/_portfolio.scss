@@ -1,0 +1,276 @@
+
+.portfolio{
+    width: 100%;
+    height: fit-content;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+
+    &__crumb{
+        position: absolute;
+        bottom: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: _palette(white);
+        font-size: 1rem;
+        letter-spacing: -1px;
+        z-index: 3;
+        font-weight: 600;
+
+        @include tablet{
+            transform: translateX(0);
+            left: 60px;
+            bottom: 50px;
+        }
+
+        @include desktop{
+            position: fixed;
+            font-size: 1rem;
+            bottom: 50px;
+            left: 50px;
+            // transform: rotate(90deg) translate(-60%, 50%);
+        }
+
+        span{
+            color: _palette(pri);
+        }
+    }
+
+    &__header{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(../img/portfolio/portfolio.jpg);
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+        position: relative;
+        // border-bottom: 1px solid _palette(trans-white);
+    
+        h3{
+            color: _palette(white);
+            font-size: 1.1rem;
+            word-spacing: 5px;
+            letter-spacing: -1px;
+            z-index: 3;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+            margin-bottom: -20px;
+
+            @include tablet{
+                font-size: 1.2rem;
+              }
+        
+              @include desktop{
+                font-size: 1.3rem;
+              }
+        }
+        h1{
+            color: _palette(white);
+            font-size: 4rem;
+            word-spacing: 5px;
+            letter-spacing: -3px;
+            z-index: 3;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+
+            @include tablet{
+                font-size: 4.5rem;
+              }
+        
+              @include desktop{
+                font-size: 5rem;
+              }
+    
+            span{
+                color: _palette(pri);
+            }
+        }
+    
+        .to-down{
+            position: absolute;
+            bottom: 50px;
+            right: 50%;
+            color: _palette(white);
+            font-size: 1.5rem;
+            animation-name: bob;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+            z-index: 3;
+            padding: 10px;
+
+            @include tablet{
+                right: 60px;
+            }
+
+            @include desktop{
+                right: 50%;
+            }
+    
+            &:hover{
+                cursor: pointer;
+                color: _palette(pri);
+            }
+        }
+    }
+
+    &__body{
+        width: 100%;
+        padding: 40px 30px;
+        height: fit-content;
+
+        @include desktop{
+            width: 63%;
+            margin: 0 auto;
+        }
+
+        &__works{
+            margin: 100px 0;
+            color: _palette(white);
+
+            @include desktop{
+                margin: 150px 0;
+            }
+
+            .title{
+                font-size: 1.2rem;
+                font-weight: bold;
+                letter-spacing: -1px;
+
+                @include desktop{
+                    margin-left: 40px;
+                    font-size: 1.5rem;
+                }
+            }
+            
+            .row{
+                width: 100%;
+
+                @include tablet{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+                }
+
+                .work{
+                    border: 1px solid _palette(trans-white);
+                    margin-top: 40px;
+                    padding: 30px 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background: _palette(dark);
+
+                    .cog{
+                        font-size: 3rem;
+                    }
+
+                    p{
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        letter-spacing: -1px;
+                        word-spacing: 5px;
+                    }
+
+                    &__img{
+                        width: 320px;
+
+                        @include tablet{
+                            width: 340px;
+                        }
+
+                        @include desktop{
+                            width: 320px;
+                        }
+                    }
+
+                    &__link{
+                        text-decoration: none;
+                        color: _palette(white);
+                        padding: 5px 20px;
+                        border: 2px solid _palette(white);
+                        font-weight: bold;
+                        transition: all .2s ease;
+                        border-radius: 2px;
+                        margin-top: 10px;
+                        font-size: 1.1rem;
+
+                        &:hover{
+                            color: _palette(pri);
+                            border-color: _palette(pri);
+                        }
+                    }
+
+                    &__stack{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 20px;
+
+                        p{
+                            display: inline-block;
+                            margin: 0 8px;
+                            font-size: 1.5rem;
+                            color: _palette(white);
+                        }
+                    }
+                }
+            }
+        }
+
+        &__contact{
+            border: 1px solid _palette(trans-white);
+            width: 250px;
+            padding: 10px 0;
+            margin: 0 auto;
+            text-align: center;
+            background: _palette(dark);
+
+            .to-top{
+                color: _palette(white);
+                font-size: 1.5rem;
+                display: inline-block;
+                padding: 10px;
+    
+                @include tablet{
+                    right: 60px;
+                }
+    
+                @include desktop{
+                    right: 50%;
+                }
+        
+                &:hover{
+                    cursor: pointer;
+                    color: _palette(pri);
+                }
+            }
+
+            a{
+                text-decoration-style: dotted;
+                text-decoration-thickness: 2px;
+                color: _palette(white);
+                outline-color: _palette(pri);
+
+                &:active{
+                color: _palette(pri);
+                }
+
+                &:hover{
+                    color: _palette(pri);
+                }
+            }
+
+            p{
+                color: _palette(white);
+                font-size: .9rem;
+                margin: 5px 0;
+                letter-spacing: 1px;
+                font-weight: bold;
+            }
+        }
+    }
+}

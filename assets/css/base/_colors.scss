@@ -1,0 +1,13 @@
+$colors: (
+    dark: #101010,
+    trans-dark: #101010f5,
+    grey: #1f1f1f,
+    pri: rgb(202, 78, 6),
+    trans-pri: rgba(202, 78, 6, 0.6),
+    white: rgb(231, 229, 229),
+    trans-white: rgba(231, 229, 229, 0.1)
+);
+
+@function _palette($color){
+    @return map-get($colors, $color);
+}
